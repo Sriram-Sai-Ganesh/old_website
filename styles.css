@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f9f9f9;
+    color: #333;
+}
+code{
+    font-family: 'Roboto Mono', monospace;
+}
+/* Navigation Bar */
+nav {
+    position: sticky;
+    top: 0;
+    background-color: #333;
+    padding: 10px 0;
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+.navbar li {
+    margin: 0 15px;
+}
+
+.navbar a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+}
+
+/* Container for two columns */
+.container {
+    display: flex;
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 20px;
+}
+
+/* Left Column */
+.left-column {
+    flex: 1;
+    max-width: 450px;
+    margin-right: 80px;
+    text-align: center;
+}
+
+.profile-pic {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 15px;
+}
+
+.left-column h1 {
+
+    font-size: 33px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.left-column p {
+    font-size: 16px;
+    width: 350px;
+    margin-bottom: 15px;
+    text-align: left;
+}
+
+.contact-links a {
+    color: #333;
+    text-decoration: none;
+    margin: 0 0px;
+}
+
+.contact-links ul {
+    list-style-type:none;
+    padding:0px;
+    margin:0px;
+    text-align: left;
+}
+.contact-links li {
+    margin-bottom: 5px;
+}
+
+
+.contact-links a:hover {
+    color: darkblue;
+    text-decoration: underline;
+}
+
+/* Right Column */
+.right-column {
+    flex: 3;
+}
+
+.right-column section {
+    margin-bottom: 30px;
+}
+
+.right-column h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #333;
+    display: inline-block;
+    padding-bottom: 5px;
+}
+
+.right-column ul {
+    list-style: disc inside;
+    margin-top: 10px;
+}
+
+.right-column p, .right-column li {
+    margin-bottom: 10px;
+}
+
+.right-column a {
+    color: #0d549a;
+    text-decoration: none;
+}
+
+.right-column a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-column {
+        max-width: none;
+        margin-right: 0;
+        margin-bottom: 20px;
+    }
+
+    .right-column {
+        width: 100%;
+    }
+}
+
+
+/* Courses */
+/* Container for all course cards */
+.course-container {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(250px, 1fr));
+    gap: 15px;
+    width: 100%;
+    max-width: 1200px;
+    padding: 10px;
+}
+
+/* Individual course card styling */
+.course-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.2s ease, box-shadow 0.2s ease, max-height 0.3s ease;
+    overflow: hidden;
+    cursor: pointer;
+    max-height: 300px; /* Default height */
+}
+
+.course-card.expanded {
+    max-height: 500px; /* Expanded height */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+/* Course title */
+.course-name {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+/* Course number */
+.course-semester {
+    font-size: 0.85em;
+    color: #777;
+    margin-bottom: 10px;
+    font-style: italic;
+}
+
+/* Instructor and semester information */
+.course-instructor {
+    font-size: 1em;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+.course-number {
+    font-size: 0.95em;
+    color: #717171;
+    margin-bottom: 5px;
+    font-style: italic;
+}
+
+/* Course description styling */
+.course-description, .hidden-content {
+    font-size: 0.85em;
+    color: #5e5e5e;
+    margin-bottom: 5px;
+    line-height: 1.4;
+}
+
+/* Hidden content styling */
+.hidden-content {
+    display: none;
+    margin-bottom: 10px;
+}
+
+.course-card.expanded .hidden-content {
+    display: block;
+}
+
+/* Links section styling */
+.course-links {
+    display: flex;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.course-links a {
+    text-decoration: none;
+    font-size: 0.85em;
+    color: #3481ce;
+    padding: 6px 10px;
+    background-color: #f0f8ff;
+    border-radius: 4px;
+    transition: background-color 0.2s ease;
+}
+
+.course-links a:hover {
+    background-color: #e0f0ff;
+}
+
+.see-more:hover {
+    color: #0056b3;
+}
