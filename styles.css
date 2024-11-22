@@ -17,6 +17,7 @@ body {
 code{
     font-family: 'Roboto Mono', monospace;
 }
+
 /* Navigation Bar */
 nav {
     position: sticky;
@@ -195,7 +196,7 @@ nav {
     transition: transform 0.2s ease, box-shadow 0.2s ease, max-height 0.3s ease;
     overflow: hidden;
     cursor: pointer;
-    max-height: 300px; /* Default height */
+    max-height: 190px;
 }
 
 .course-card.expanded {
