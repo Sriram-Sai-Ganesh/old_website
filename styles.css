@@ -196,7 +196,7 @@ nav {
     transition: transform 0.2s ease, box-shadow 0.2s ease, max-height 0.3s ease;
     overflow: hidden;
     cursor: pointer;
-    max-height: 190px;
+    max-height: 290px;
 }
 
 .course-card.expanded {
