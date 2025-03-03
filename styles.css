@@ -161,6 +161,26 @@ nav {
 }
 
 
+/* Container for geographic visitor info */
+#mapmyvisitors-container {
+    width: 300px; /* Adjust width as needed */
+    height: 200px; /* Adjust height as needed */
+    /* position: relative;
+    margin: 20px auto; /* Center it and add spacing */
+    display: block;
+    /* border: 1px solid #ccc; Optional border */
+    border-radius: 8px; /* Rounded corners */
+    overflow: hidden; 
+}
+
+/* Ensure the script's iframe or canvas fits within the container */
+#mapmyvisitors {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+
 /* Courses */
 /* Container for all course cards */
 .course-container {
