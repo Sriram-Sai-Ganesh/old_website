@@ -1,0 +1,5 @@
+- make CV open in different page
+- update CV
+- update coursework details
+- change 'extracurriculars' to 'projects'
+    - add sub-page for extracurriculars
